@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&family=Fira+Mono:wght@400;500&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* || VARIABLES */
+:root {
+  --bg-black: #151515; /* bg = background color */
+  --fc-green: #35d7ef; /* fc = font color */
+  --bg-green: #8892b0;
+  --fc-blue-shade1: #e8e6e3; /* for heading */
+  --fc-blue-shade2: #8892b0; /* for paragraphs */
+  --fc-gray: #afa99e;
+  --font-sans-hero-section: "Inter", sans-serif;
+  --font-sans: "DM Sans", sans-serif;
+  --font-mono2: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  --fs-main-heading: clamp(4rem, 7vw, 7rem); /* fs = font size*/
+  --fs-numbered-heading: clamp(2.6rem, 5vw, 3.2rem);
+  --padding-sm: 6rem;
+  --padding-md: 8rem;
+  --padding-lg: 8rem;
+  --padding-xl: 10rem;
+  --padding: clamp(2rem, 3.5vw, 5rem);
+  --width-lg: 1084px;
+  --margin-lg: 11.9rem;
+
+  /* new color scheme */
+  --black-shade1: #101418;
+  --black-shade2: #181c20;
+  --white-shade1: #ffffff;
+  --white-shade2: #f8f9f4;
+  --gray-shade1: #96a0aa;
+  --gray-shade2: #e8e6e3;
+  --gray-shade3: #8892b0;
+  --font-mono: "Red Hat Display", sans-serif;
+  /* --font-mono: "League Gothic", sans-serif; */
+  --font-sans: "Inter Tight", sans-serif;
+}
+
+/* || RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-mono);
+  color: var(--white-shade2);
+  background-color: var(--black-shade1);
+}
+
+/* || GENERAL */
+
+.general__h2 {
+  text-align: center;
+  color: var(--white-shade2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-numbered-heading);
+  margin-bottom: 4rem;
+}
+
+.general__span {
+  border-bottom: 3px solid var(--gray-shade1);
+}
+
+img {
+  max-width: 100%;
+}
+
+#resume-button-1 a,
+#resume-button-2 a {
+  font-family: var(--font-mono);
+  background-color: inherit;
+  text-decoration: none;
+  color: var(--black-shade2);
+}
+
+#resume-button-1:hover a,
+#resume-button-2:hover a {
+  color: inherit;
+}
+
+#resume-button-2 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  padding: 1.3rem 2.5rem;
+}
+
+/* || SCROLL BAR CODE */
+::-webkit-scrollbar-track {
+  background-color: var(--black-shade1);
+}
+
+::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--black-shade1);
+  border: 0.3rem solid #83796b;
+  border-radius: 1rem;
+}
+
+body {
+  scroll-padding-top: 10rem; /* Adjust the value based on your navbar height */
+}
+
+/* end of code for scroll bar */

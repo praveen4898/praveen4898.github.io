@@ -1,0 +1,33 @@
+/* || FOOTER */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-mono2);
+  color: var(--white-shade2);
+  background-color: var(--black-shade1);
+  margin-bottom: 2rem;
+}
+
+footer div {
+  background-color: var(--black-shade2);
+  border-radius: 2rem;
+  padding: 2rem 2rem;
+  width: 92%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer .footer-container p {
+  font-size: 1.3rem;
+}
+
+.footer-container span {
+  color: red;
+}
+
+/* media query */
+@media only screen and (max-width: 1047px) {
+}

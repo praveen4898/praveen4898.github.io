@@ -12,8 +12,9 @@
     --text: #2881a4;
     --text-light: rgb(249, 246, 246);
     --text-lighter: rgb(249, 246, 246);
-    /*--body-color: hsl(var(--hue-color), 60%, 99%);*/
+    --body-color: hsl(var(--hue-color), 60%, 99%);
     --body-color: #050f2c;
+
     --card-color: #1d1515;
     
     /*========== Font and typography ==========*/

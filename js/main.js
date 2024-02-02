@@ -64,11 +64,11 @@ function transform_hamburger() {
 //! ============= resume button ==========
 document.getElementById("resume-link-1").onclick = () => {
 
-    window.open("https://drive.google.com/file/d/1AfW5cVA52AzUwj-2b7cMt8TZZMCX4G45/view?usp=drive_link");
+    window.open("https://drive.google.com/file/d/1JCxFPfhrukSe5BxGeA0cQUWVk79pnI8V/view?usp=drivesdk");
 }
 document.getElementById("resume-link-2").onclick = () => {
 
-    window.open("https://drive.google.com/file/d/1AfW5cVA52AzUwj-2b7cMt8TZZMCX4G45/view?usp=drive_link");
+    window.open("https://drive.google.com/file/d/1JCxFPfhrukSe5BxGeA0cQUWVk79pnI8V/view?usp=drivesdk");
 
 }
 

@@ -71,6 +71,8 @@ document.getElementById("resume-link-2").onclick = () => {
     window.open("https://drive.google.com/file/d/1JCxFPfhrukSe5BxGeA0cQUWVk79pnI8V/view?usp=drivesdk");
 
 }
+// https://drive.google.com/uc?export=download&id=1AfW5cVA52AzUwj-2b7cMt8TZZMCX4G45
+// https://drive.google.com/uc?export=download&id=1JCxFPfhrukSe5BxGeA0cQUWVk79pnI8V
 
 //! ================= Fixture =================
     window.addEventListener('load',()=>{

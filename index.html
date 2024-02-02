@@ -1,1101 +1,944 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- <link rel="stylesheet" href="./styles/index.css" /> -->
-    <link rel="stylesheet" href="./styles/variables-&-reset.css" />
-    <link rel="stylesheet" href="./styles/navbar.css" />
-    <link rel="stylesheet" href="./styles/home.css" />
-    <link rel="stylesheet" href="./styles/about.css" />
-    <link rel="stylesheet" href="./styles/skill.css" />
-    <link rel="stylesheet" href="./styles/project.css" />
-    <link rel="stylesheet" href="./styles/github.css" />
-    <link rel="stylesheet" href="./styles/contact.css" />
-    <link rel="stylesheet" href="./styles/footer.css" />
-    <title>Praveen_kumar_Portfolio</title>
-    <!-- <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script> -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Jayachandran Ramu</title>
+    <link rel="shortcut icon" href="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qbu0ko3g001cxhmy4f4k.png"
+        type="image/x-icon">
+    <!--!================= Bootstrap Css =================------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--!================= Font Awesome =================------->
+    <script src="https://kit.fontawesome.com/ff75adb155.js" crossorigin="anonymous"></script>
+
+    <!--!================= github stats =================------->
+    <link rel="stylesheet" href="assets/css/github_states.css">
+
+    <!--!================= AOS CSS =================------->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav id="nav-menu" class="nav">
-      <div>
-        <div class="nav__inner-container">
-          <h3 class="nav__logo">&lt; Praveen Kumar / &gt;</h3>
-          <div class="nav__section-links">
-            <!-- <p class="nav__reference-container"> -->
-              <a href="#home" class="nav__reference nav-link home">Home</a>
-            <!-- </p> -->
 
-            <!-- <p class="nav__reference-container"> -->
-              <a href="#about" class="nav__reference nav-link about">About</a>
-            <!-- </p> -->
+    <!--!================= main =================------->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media_queries.css">
 
-            <!-- <p class="nav__reference-container"> -->
-              <a href="#skills" class="nav__reference nav-link skills"
-                >Skills</a
-              >
-            <!-- </p> -->
+</head>
+<style>
 
-            <!-- <p class="nav__reference-container"> -->
-              <a href="#projects" class="nav__reference nav-link projects"
-                >Projects</a
-              >
-            <!-- </p> -->
-            <!-- <p class="nav__reference-container"> -->
-              <a href="#contact" class="nav__reference nav-link contact"
-                >Contact</a
-              >
-            <!-- </p> -->
-            <button
-              class="button nav-link resume"
-              id="resume-button-1"
-              onclick="resume()"
-            >
-              <a
-                href="./Praveen Kumar R-Full Stack Web Developer.pdf"
-                id="resume-link-1"
-                download="Praveen-kumar-Resume.pdf"
-                >Resume</a
-              >
-            </button>
-          </div>
-          <div class="hamburger">
-            <div class="hamburger__bar1"></div>
-            <div class="hamburger__bar2"></div>
-            <div class="hamburger__bar3"></div>
-          </div>
-        </div>
-      </div>
-    </nav>
+</style>
 
-    <!-- Mobile Navbar -->
-    <div class="mobile-nav">
-      <div class="mobile-nav__section-links">
-        <!-- <p class="nav__reference-container"> -->
-          <a href="#home" class="mobile-nav__reference nav__reference"
-            ><span class="nav__span">Home</span></a
-          >
-        <!-- </p> -->
-
-        <!-- <p class="nav__reference-container"> -->
-          <a href="#about" class="mobile-nav__reference nav__reference"
-            ><span class="nav__span">About</span></a
-          >
-
-        <!-- </p> -->
-        <!-- <p class="nav__reference-container"> -->
-          <a href="#skills" class="mobile-nav__reference nav__reference"
-            ><span class="nav__span">Skills</span></a
-          >
-        <!-- </p> -->
-        <!-- <p class="nav__reference-container"> -->
-          <a href="#projects" class="mobile-nav__reference nav__reference"
-            ><span class="nav__span">Projects</span></a
-          >
-        <!-- </p> -->
-        <!-- <p class="nav__reference-container"> -->
-          <a href="#contact" class="mobile-nav__reference nav__reference"
-            ><span class="nav__span">Contact</span></a
-          >
-        <!-- </p> -->
-        <button class="button" onclick="resume()">
-          <a href="./Praveen Kumar R-Full Stack Web Developer.pdf" download="Praveen-Kumar-Resume.pdf"
-            >Resume</a
-          >
-        </button>
-      </div>
-    </div>
-    <!-- end of Mobile Navbar -->
-    <!-- end of Navbar -->
-
-    <!-- Home Section -->
-    <div class="home" id="home">
-      <div id="home" class="hero-section">
-        <div class="home__inner-container">
-          <div class="home__left-container">
-            <div class="home__intro">
-              <div>
-                <h1>Hi, my name is</h1>
-              </div>
-              <h2>Praveen Kumar.</h2>
-              <h3>An Aspiring Full Stack Web Developer.</h3>
-              <p>
-                I am currently engrossed in the realm of Full Stack web development at Masai School. 
-                Throughout this transformative journey, I've honed my skills by undertaking a
-                 variety of projects, both as an independent creator and through collaborative efforts.
-              </p>
+<body>
+    <!--!================= Header =================------->
+    <section id="nav-menu" data-aos="fade-down" class="navigation">
+        <div class="nav_container ">
+            <a href="index.html" class="nav_logo"><img
+                    src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4ko2hp9fqtk5xxqpril0.png" alt=""></a>
+            <!-- Menu toggle icon for small device -->
+            <div id="menuToggle">
+                <span id="first_span"></span>
+                <span id="second_span"></span>
+                <span id="third_span"></span>
             </div>
-            <button class="button" id="resume-button-2" onclick="resume()">
-              <a
-                href="./Praveen Kumar R-Full Stack Web Developer.pdf"
-                id="resume-link-2"
-                download="Praveen-Kumar-Resume.pdf"
-                >Resume</a
-              >
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end of Home Section -->
-
-    <!-- About Section -->
-    <div id="about" class="about section">
-      <div class="about__inner-container">
-        <h2
-          class="general__h2"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
-          <span class="general__span">About Me</span>
-        </h2>
-        <div
-          class="about__flex-container"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          data-aos-once="true"
-        >
-          <div class="about__description">
-            <!-- <p id="user-detail-name"></p> -->
-            <p id="user-detail-intro">
-              Quality and solution driven, skilled in and having hands-on
-              experience of working majorly with HTML, CSS, JavaScript, React,
-              Node, Express, MongoDB. Highly resilient and focused on learning
-              new techniques to build real world websites while facilitating the
-              growth of self and that of the organization.
-            </p>
-          </div>
-          <div class="about__image-container">
-            <div class="about__image">
-              <img
-                src="./images/ABOUTMEPROFILEPIC.jpg"
-                alt="Praveen Kumar"
-                class="home-img"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end of About Section -->
-
-    <!-- skill section -->
-    <div id="skills" class="skill">
-      <div class="skill__inner-container">
-        <h2
-          class="skill__title general__h2"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
-          <span class="general__span">Skills</span>
-        </h2>
-        <div
-          class="skill__logo-container"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          data-aos-once="true"
-        >
-          <!-- HTML logo -->
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="html">            >
-
-            <!-- <svg
-              viewBox="0 0 128 128"
-              role="img"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="dev-icon skills-card-img"
-            >
-              <path
-                d="M9.032 2l10.005 112.093 44.896 12.401 45.02-12.387L118.968 2H9.032zm89.126 26.539l-.627 7.172L97.255 39H44.59l1.257 14h50.156l-.336 3.471-3.233 36.119-.238 2.27L64 102.609v.002l-.034.018-28.177-7.423L33.876 74h13.815l.979 10.919L63.957 89H64v-.546l15.355-3.875L80.959 67H33.261l-3.383-38.117L29.549 25h68.939l-.33 3.539z"
-              />
-            </svg> -->
-            <p class="skills-card-name">HTML</p>
-          </div>
-
-          <!-- CSS logo -->
-          <div class="skills-card">
-            <img   height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="css">
-            
-
-            <!-- <svg
-              viewBox="0 0 128 128"
-              role="img"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="dev-icon skills-card-img"
-            >
-              <path
-                d="M8.76 1l10.055 112.883 45.118 12.58 45.244-12.626L119.24 1H8.76zm89.591 25.862l-3.347 37.605.01.203-.014.467v-.004l-2.378 26.294-.262 2.336L64 101.607v.001l-.022.019-28.311-7.888L33.75 72h13.883l.985 11.054 15.386 4.17-.004.008v-.002l15.443-4.229L81.075 65H48.792l-.277-3.043-.631-7.129L47.553 51h34.749l1.264-14H30.64l-.277-3.041-.63-7.131L29.401 23h69.281l-.331 3.862z"
-              />
-            </svg> -->
-            <p class="skills-card-name">CSS</p>
-          </div>
-
-         
-
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/sass-1.svg" alt="sass">
-            <p class="skills-card-name">Sass</p>
-          </div>
-
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src=" https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg" alt="Bootstrap">
-            <p class="skills-card-name">Bootstrap</p>
-          </div>
+            <div class="navigation_box" id="navigation_box">
+                <!-- Collapse button -->
+                <ul class="navigation_list_link_container">
+                    <li class="nav-link home" id="nav-link">01. <a href="#home">Home</a> </li>
+                    <li class="nav-link about" id="nav-link">02. <a href="#about">About</a> </li>
+                    <li class="nav-link skills" id="nav-link">03. <a href="#skills">Skills</a> </li>
+                    <li class="nav-link projects" id="nav-link">04. <a href="#projects">Project</a> </li>
+                    <li class="nav-link contact" id="nav-link">05. <a href="#contact">Contact</a> </li>
+                   
+                </ul>
 
 
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" alt="Tailwind">
-            <p class="skills-card-name">Tailwind</p>
-          </div>
-          
-          <!-- JS logo -->
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" alt="Javascript">
-            <!-- <svg
-              viewBox="0 0 128 128"
-              role="img"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="dev-icon skills-card-img"
-            >
-              <path d="M1.408 1.408h125.184v125.185H1.408z" />
-              <path
-                d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"
-              />
-            </svg> -->
-            <p class="skills-card-name">Javascript</p>
-          </div>
-
-          <!-- React logo -->
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React">
-
-            
-            <!-- <svg
-              viewBox="0 0 128 128"
-              role="img"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="dev-icon skills-card-img"
-            >
-              <g>
-                <circle cx="64" cy="64" r="11.4" />
-                <path
-                  d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM7 64c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 7 69.6 7 64zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"
-                />
-              </g>
-            </svg> -->
-
-            <p class="skills-card-name">React</p>
-          </div>
-
-          <!-- Redux logo -->
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/redux.svg" alt="redux">
-
-            <!-- <svg
-              viewBox="-3.5 -3 128 128"
-              role="img"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="dev-icon skills-card-img"
-            >
-              <path
-                transform="scale(0.95)"
-                d="M88.69 88.11c-9 18.4-24.76 30.78-45.61 34.85a39.73 39.73 0 01-9.77 1.14c-12 0-23-5-28.34-13.19C-2.2 100-4.64 76.87 19 59.76c.48 2.61 1.46 6.19 2.11 8.31A38.24 38.24 0 0010 81.1c-4.4 8.64-3.91 17.27 1.3 25.25 3.6 5.38 9.3 8.65 16.63 9.65a44 44 0 0026.55-5c12.71-6.68 21.18-14.66 26.72-25.57a9.32 9.32 0 01-2.61-6A9.12 9.12 0 0187.37 70h.34a9.15 9.15 0 011 18.25zm28.67-20.2c12.21 13.84 12.54 30.13 7.82 39.58-4.4 8.63-16 17.27-31.6 17.27a50.48 50.48 0 01-21-5.05c2.29-1.63 5.54-4.24 7.33-5.87a41.54 41.54 0 0016 3.42c10.1 0 17.75-4.72 22.31-13.35 2.93-5.7 3.1-12.38.33-19.22a43.61 43.61 0 00-17.27-20.85 62 62 0 00-34.74-10.59h-2.93a9.21 9.21 0 01-8 5.54h-.31a9.13 9.13 0 01-.3-18.25h.33a9 9 0 018 4.89h2.61c20.8 0 39.06 7.98 51.42 22.48zm-82.75 23a7.31 7.31 0 011.14-4.73c-9.12-15.8-14-35.83-6.51-56.68C34.61 13.83 48.13 3.24 62.79 3.24c15.64 0 31.93 13.69 33.88 40.07-2.44-.81-6-2-8.14-2.44-.53-8.63-7.82-30.13-25.09-29.81-6.19.17-15.31 3.1-20 9.12a43.69 43.69 0 00-9.64 25.25 59.61 59.61 0 008.47 36.16 2.75 2.75 0 011.14-.16h.32a9.12 9.12 0 01.33 18.24h-.33a9.16 9.16 0 01-9.12-8.79z"
-              />
-            </svg> -->
-            <p class="skills-card-name">Redux</p>
-          </div>
-
-          <!-- Typescript logo -->
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/typescript.svg" alt="Typescript">
-
-            <!-- <svg
-              viewBox="0 0 128 128"
-              role="img"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="dev-icon skills-card-img"
-            >
-              <path
-                data-name="original"
-                d="M1.5 63.91v62.5h125v-125H1.5zm100.73-5a15.56 15.56 0 017.82 4.5 20.58 20.58 0 013 4c0 .16-5.4 3.81-8.69 5.85-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 00-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.58 4.58 0 00.54 2.34c.83 1.73 2.38 2.76 7.24 4.86 8.95 3.85 12.78 6.39 15.16 10 2.66 4 3.25 10.46 1.45 15.24-2 5.2-6.9 8.73-13.83 9.9a38.32 38.32 0 01-9.52-.1 23 23 0 01-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34 9.34 0 011.15-.73L82 101l3.59-2.08.75 1.11a16.78 16.78 0 004.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 00.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48 16.48 0 01-3.43-6.25 25 25 0 01-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.66 31.66 0 019.49.26zm-29.34 5.24v5.12H56.66v46.23H45.15V69.26H28.88v-5a49.19 49.19 0 01.12-5.17C29.08 59 39 59 51 59h21.83z"
-              />
-            </svg> -->
-            <p class="skills-card-name">Typescript</p>
-          </div>
-
-          <!-- Chakra UI logo -->
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjljkfx2IKwpYSghIjPIKB-9v3YMnMzupGOBbPih5VQP3z9ceLudQ6V0U6yA&s" alt="">
-            <!-- <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 48 48"
-              role="img"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icons8 skills-card-img"
-            >
-              <circle cx="24" cy="24" r="20" />
-              <path
-                d="M33.357,21.5h-8.882c-0.187,0-0.308-0.198-0.222-0.365l5.03-9.745	c0.13-0.253-0.195-0.492-0.398-0.293l-14.2,13.974c-0.159,0.157-0.048,0.428,0.175,0.428H24.2c0.202,0,0.32,0.227,0.205,0.393	l-7.126,10.265c-0.17,0.245,0.154,0.528,0.374,0.327l15.873-14.55C33.694,21.78,33.585,21.5,33.357,21.5z"
-              />
-            </svg> -->
-            
-            <p class="skills-card-name">Chakra UI</p>
-          </div>
-
-          <!-- NodeJs logo -->
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/nodejs-1.svg" alt="">
-
-            <!-- <svg
-              viewBox="0 0 128 128"
-              role="img"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="dev-icon skills-card-img"
-            >
-              <path
-                d="M112.771 30.334L68.674 4.729c-2.781-1.584-6.402-1.584-9.205 0L14.901 30.334C12.031 31.985 10 35.088 10 38.407v51.142c0 3.319 2.084 6.423 4.954 8.083l11.775 6.688c5.628 2.772 7.617 2.772 10.178 2.772 8.333 0 13.093-5.039 13.093-13.828v-50.49c0-.713-.371-1.774-1.071-1.774h-5.623C42.594 41 41 42.061 41 42.773v50.49c0 3.896-3.524 7.773-10.11 4.48L18.723 90.73c-.424-.23-.723-.693-.723-1.181V38.407c0-.482.555-.966.982-1.213l44.424-25.561c.415-.235 1.025-.235 1.439 0l43.882 25.555c.42.253.272.722.272 1.219v51.142c0 .488.183.963-.232 1.198l-44.086 25.576c-.378.227-.847.227-1.261 0l-11.307-6.749c-.341-.198-.746-.269-1.073-.086-3.146 1.783-3.726 2.02-6.677 3.043-.726.253-1.797.692.41 1.929l14.798 8.754a9.294 9.294 0 004.647 1.246c1.642 0 3.25-.426 4.667-1.246l43.885-25.582c2.87-1.672 4.23-4.764 4.23-8.083V38.407c0-3.319-1.36-6.414-4.229-8.073zM77.91 81.445c-11.726 0-14.309-3.235-15.17-9.066-.1-.628-.633-1.379-1.272-1.379h-5.731c-.709 0-1.279.86-1.279 1.566 0 7.466 4.059 16.512 23.453 16.512 14.039 0 22.088-5.455 22.088-15.109 0-9.572-6.467-12.084-20.082-13.886-13.762-1.819-15.16-2.738-15.16-5.962 0-2.658 1.184-6.203 11.374-6.203 9.105 0 12.461 1.954 13.842 8.091.118.577.645.991 1.24.991h5.754c.354 0 .692-.143.94-.396.24-.272.367-.613.335-.979-.891-10.568-7.912-15.493-22.112-15.493-12.631 0-20.166 5.334-20.166 14.275 0 9.698 7.497 12.378 19.622 13.577 14.505 1.422 15.633 3.542 15.633 6.395 0 4.955-3.978 7.066-13.309 7.066z"
-              ></path>
-            </svg> -->
-            <p class="skills-card-name">NodeJs</p>
-          </div>
-
-          <!-- Express logo -->
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src="https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png" alt="">
-
-
-
-            <!-- <svg
-              viewBox="0 0 128 128"
-              role="img"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="dev-icon skills-card-img"
-            >
-              <path
-                d="M126.67 98.44c-4.56 1.16-7.38.05-9.91-3.75-5.68-8.51-11.95-16.63-18-24.9-.78-1.07-1.59-2.12-2.6-3.45C89 76 81.85 85.2 75.14 94.77c-2.4 3.42-4.92 4.91-9.4 3.7l26.92-36.13L67.6 29.71c4.31-.84 7.29-.41 9.93 3.45 5.83 8.52 12.26 16.63 18.67 25.21 6.45-8.55 12.8-16.67 18.8-25.11 2.41-3.42 5-4.72 9.33-3.46-3.28 4.35-6.49 8.63-9.72 12.88-4.36 5.73-8.64 11.53-13.16 17.14-1.61 2-1.35 3.3.09 5.19C109.9 76 118.16 87.1 126.67 98.44zM1.33 61.74c.72-3.61 1.2-7.29 2.2-10.83 6-21.43 30.6-30.34 47.5-17.06C60.93 41.64 63.39 52.62 62.9 65H7.1c-.84 22.21 15.15 35.62 35.53 28.78 7.15-2.4 11.36-8 13.47-15 1.07-3.51 2.84-4.06 6.14-3.06-1.69 8.76-5.52 16.08-13.52 20.66-12 6.86-29.13 4.64-38.14-4.89C5.26 85.89 3 78.92 2 71.39c-.15-1.2-.46-2.38-.7-3.57q.03-3.04.03-6.08zm5.87-1.49h50.43c-.33-16.06-10.33-27.47-24-27.57-15-.12-25.78 11.02-26.43 27.57z"
-              ></path>
-            </svg> -->
-            <p class="skills-card-name">Express</p>
-          </div>
-
-          <!-- checklogo -->
-
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/postman.svg" alt="">
-            <p class="skills-card-name">Postman</p>
-          </div>
-
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/mysql-logo.svg" alt="">
-            <p class="skills-card-name">Mysql</p>
-          </div>
-
-
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/java-14.svg" alt="">
-            <p class="skills-card-name">Java</p>
-          </div>
-
-
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="">
-            <p class="skills-card-name">MongoDB</p>
-          </div>
-
-          <div class="skills-card">
-            <img  height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/git-icon.svg" alt="">
-            <p class="skills-card-name">Git</p>
-          </div>
-
-          
-          <div  class="skills-card">
-            <img  height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg" alt="">
-            <p class="skills-card-name">GitHub</p>
-          </div>
-
-          <div  class="skills-card">
-            <img  height="70px" width="70px"  src="https://cdn.worldvectorlogo.com/logos/netlify.svg" alt="Netlify">
-            <p class="skills-card-name">Netlify</p>
-          </div>
-          
-          <div  class="skills-card">
-            <img  height="70px" width="75px"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEUAAAD///+qqqr09PQkJCTh4eGvr6+hoaHo6Oh8fHyFhYW7u7v8/Pz4+PgvLy/Y2NhJSUnNzc3ExMRfX191dXU/Pz9VVVVubm6SkpK1tbXm5uYeHh7c3NydnZ2IiIgYGBgPDw80NDRNTU1oaGgSEhIrKytFRUUzMzMpKQF3AAAJp0lEQVR4nOWdiUKzOhCFw1IpdqGFbrbWtv5a3/8NL6jdIAmTZA6L9zyA5LOQSeZMJsIDazJI5unT2zo7n3aHD1HoeAi/ltl646fzZBugByBwf3oSJFGcvX8ehUbTWRZHSTDBDQNEGKR+/KUjK+nr2U9BvyaAcJhslqEB3UXhcp8M+YfDTRj48acF3UXTRcT9U7ISvvonB7orpZ9wDoqPcBitdgx8hQ6riO915SIcLZjoLlqPxjwjYyEc7G1mljqF+wHH4BgIkxiA963DguGLdCUcp4if76ZZ6roYcCMcpysoX6H3F7cP0olwhOcrNHtpiTCdNcJXaDVvgXDLHR70+me91LEkDN4a5Sv0bMloRzg6Nw4oxDJtjHC7boGvUGazBDAnHEdcy09zhZF55DAmDP61xldobbwkNyV8aZWvkA8lDGBLUAMZTqpGhAPsGpSq0GjCMSF8ahvtqicM4XPbXHd6BhAOm1uFUjQjz6lUwqFLBg2hKRWRSDg6tk1U1YiTsDtzzL1o8w2JMGqbRaGIi7DZnaCJFjyEm7Y5NNpwEHYpDFZVHxhrCbsNSECsI+zyK/qjuhe1hrC7k8xNNdONnrCrYeJR+qChJexmoK9KG/p1hKO2R06WbgGnIRy2PW66jppluJpwOG173Ab6VCOqCbu1H6zTzJyw65G+LGXkVxH2ZRq9STWhKggHbY/XQooMnJww6Eba0EyhPI8qJ+zbR/ijmE7otz1WS0ndcBlhj0J9SbL3VEI4bssedNc/ifkmIezHhkIuyTajSjhozwB1125LIMzaHqWT1vWEadtjdFRlI1UmDJZtD9FR5/J8WibEx/o52ON50xMG2KeLYg+ATt9ttYTwQouPfKt6wD5ioSOcY5+da+/h8z+phhBeTbks5oEx+DEzNSG+WObn3/sKfspIRTiGp2Yu/11wWc5qrCCE/4THSyHs8Ih9UConnLxjH3u/RQVHjPsf8Y4Qv167JTXRS6dUSgivir2vuQNHjFBGmGCfKcTp4eQEeFZLJIRwq/Bx1Q9eXMRVwgF4LSXWpQwDOGIMKoRwO/v1ERCd79qXCcfoHHA1mYnNWYZlQvRqWFL1OsFuFEclQnQGUea1Y9dQi0dCdBJ4KTtjN8YmvYYPhHvosxT5dnAIjh4IwTu2TAoIjhire8IEHAxVh11fkTP47vWOEGw2ldNfN0G/Dv+OEFx2oT4CMkE++XQjBOcQdbV10IgRXAmxbtNZexobue32r4TYbYX+YCRyjxFfCLHVT6pIcREwYnxXShWE2MBb1xYBOQkkv4TQKbtq6JUF3LdtfgmRWaGw/vBOgEsQLX8IoeVBlEMfuJ1bUUQksFnEDwIgclWcfhMil2y001e4qc7/JgTavu8kQKBtGReEE5O+aoaq1n7INURNBfnOWyDjkbyUTiZYxAhyQtxH8GHQHQC1QU1yQtyye18PdhUqYkQ5IWxduDTpDIByvuOcEJbwMmu2AnK+M08EKBNIfT5ALsy79D4RW9DW6Wja2gnjfH8OBGoqpUeKiyAR45gI1B7bvLUjxvmeC9C627SLTCFIxEgFZt19suoFiJj0ngRmvUTs6FAS4ot5ExBbrexoUwWIGGsBCfhlR5sqgMmXCcQEZh4pLuKfFc4CsDs06+P0IH7n+yQAe09SyxGF2H2MneDfmEkdbarYne+DODL/RZWjTRX3KvKD+e+Jep+iTl1oeqeXa/tmqPPNIbWjTRW6LsRV7o3/oc63uwhtjWrFHDF45xq9o00Vp/N9ZI6Hdq1+y+LcYxwE64lR10hxEWPECAXHnRtXcV29weg0fAlOA7be0aaKb19+5twfEhxtqvic74xzj++ypyiLLSu1Fnzt42mONlVcPsZG8DWiscs+qcS1x/D58qVUR5sqJuc75ct5Ux1tqpic77lIjix/yCH7pBJPxEjEgCf3Y+JoU8WxoJxuBdO5ShNHmyqOiDELmDxgI0ebKg7nO+Py8Xn2FGUxON8xUy2GqaNNlft/P+KppzF2tKlyd74Tnpoo/khxkXPEKGqiJu7eDCBS/MrV+f4q6trcX3YbR5sqx4jxzFJfaudoU+XmfPssNcK8e4qy3NbNKUedt62jTZXLR/Rb5+1Yq2/raFPl4nz/1uq7Tcm4SHGRwzyx99zPzDg42lQ5ON+XMzMud8hwZp9UsvYxppdzTw4fs5OjTZW18/19YP2b0P5Nd3O0qbL9jKIrofXSlMunqJPlS3Y7Q+rZmhesV4RrZOd8T70boeVr6u5oU2XlfN+f5X6189gQqQu5bJzvQ3JHaJdD53C0qbKIGA89FaxSGTyONlXmKcHHvhg2iz9M9kkl84jx2NvE4sD6zm9Wpo7ixa5tqsdQ8yr3GPK6XmtlqnBcJux6rZWprhP9rV9b20Pi1aHar60HVY8mujUTbrBvYqOS9U38U3PNnZHSaP/S5iTvX4pu0dyg3idSwj/0I96nHh56Qf+VH3Gm6gX9Z5ZuD9mjx57s/bprTaWVpyb8G1/iXEPYi3tH61SyikqE27aHx6BS9qh8RwlfMWZbKl8TWLlnBt63HKxK7VLlrqC+R4xK9qh631N/7yQrVPUZqoTbPt/ZJbEzJfeu9fVuwEKke9e8MfzCIJhkVROy+w/xlz6hJCvOkt5hib9RByNpcdZfuodUfiXw//Uu2V5mT43uA/4f3Oncv0/R+F7uvu33Le5Wd6qUalxTdZmymhB+dRinNHXYGsIebaR0Rbw6wt5MqKpptJ6wJ9c76+sj9YS9yL0t9Ag1hPiLrpxVV7dUR9j5yK+M9GTCjiPWAhIIO/2iEkrrCIQdnm5qJhkyYWeDBqmMnkTY0dCvDfSGhF1cwB2J562IhOC7aCz0ST30SCX0ht3aL87IpzrJhN0KjAY19AaEHZpvaHOMOaE36EaS0ew0mRGhF3ThTX02OwRhRtgFY8r0qJUpoTds10H9Z3yKxZjQG0ftfY073/zQsTlhPuFg74BVa23Tx8iG0PNS8PX2Up3tjsXbEbYxqb5ZniOzJMwZm/XCF9aNtqwJPW/eXDnqzOGMlQOh5700sxpfOfWlcCL0xi/Ii1J/+VK3thRuhJ43SbGFcKEjnzthrmQBu/M6ZjhKzUCYLwE2iGVOuGfpSMFCmH+QI+7l6oKr7Q0TYa5htOJ6W3eriK/1FB9hrsTnyFedfNaWN6yEuYJo4UI5jX3uQ/7chLmGyX5pM/OEy00C6IsGICwUpP6zyQ02y9hPQR0aQISFJkESxdlM+9IeP9+zOEoCYPMCIOGPgm0yT/3NOjt/hYfjN9bHYXeaZeu3p3SeDOCNGf4DXyl8T6dG2MUAAAAASUVORK5CYII=" alt="vercel">
-            <p class="skills-card-name">Vercel</p>
-          </div>
-          
-<!-- checkicon -->
-
-
-          <!-- MongoDB logo -->
-          <!-- <div class="skills-card">
-            <svg
-              viewBox="0 0 128 128"
-              role="img"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="dev-icon skills-card-img"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M88.038 42.812c1.605 4.643 2.761 9.383 3.141 14.296.472 6.095.256 12.147-1.029 18.142-.035.165-.109.32-.164.48-.403.001-.814-.049-1.208.012-3.329.523-6.655 1.065-9.981 1.604-3.438.557-6.881 1.092-10.313 1.687-1.216.21-2.721-.041-3.212 1.641-.014.046-.154.054-.235.08l.166-10.051-.169-24.252 1.602-.275c2.62-.429 5.24-.864 7.862-1.281 3.129-.497 6.261-.98 9.392-1.465 1.381-.215 2.764-.412 4.148-.618z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M61.729 110.054c-1.69-1.453-3.439-2.842-5.059-4.37-8.717-8.222-15.093-17.899-18.233-29.566-.865-3.211-1.442-6.474-1.627-9.792-.13-2.322-.318-4.665-.154-6.975.437-6.144 1.325-12.229 3.127-18.147l.099-.138c.175.233.427.439.516.702 1.759 5.18 3.505 10.364 5.242 15.551 5.458 16.3 10.909 32.604 16.376 48.9.107.318.384.579.583.866l-.87 2.969z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M88.038 42.812c-1.384.206-2.768.403-4.149.616-3.131.485-6.263.968-9.392 1.465-2.622.417-5.242.852-7.862 1.281l-1.602.275-.012-1.045c-.053-.859-.144-1.717-.154-2.576-.069-5.478-.112-10.956-.18-16.434-.042-3.429-.105-6.857-.175-10.285-.043-2.13-.089-4.261-.185-6.388-.052-1.143-.236-2.28-.311-3.423-.042-.657.016-1.319.029-1.979.817 1.583 1.616 3.178 2.456 4.749 1.327 2.484 3.441 4.314 5.344 6.311 7.523 7.892 12.864 17.068 16.193 27.433z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M65.036 80.753c.081-.026.222-.034.235-.08.491-1.682 1.996-1.431 3.212-1.641 3.432-.594 6.875-1.13 10.313-1.687 3.326-.539 6.652-1.081 9.981-1.604.394-.062.805-.011 1.208-.012-.622 2.22-1.112 4.488-1.901 6.647-.896 2.449-1.98 4.839-3.131 7.182a49.142 49.142 0 01-6.353 9.763c-1.919 2.308-4.058 4.441-6.202 6.548-1.185 1.165-2.582 2.114-3.882 3.161l-.337-.23-1.214-1.038-1.256-2.753a41.402 41.402 0 01-1.394-9.838l.023-.561.171-2.426c.057-.828.133-1.655.168-2.485.129-2.982.241-5.964.359-8.946z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M65.036 80.753c-.118 2.982-.23 5.964-.357 8.947-.035.83-.111 1.657-.168 2.485l-.765.289c-1.699-5.002-3.399-9.951-5.062-14.913-2.75-8.209-5.467-16.431-8.213-24.642a4498.887 4498.887 0 00-6.7-19.867c-.105-.31-.407-.552-.617-.826l4.896-9.002c.168.292.39.565.496.879a6167.476 6167.476 0 016.768 20.118c2.916 8.73 5.814 17.467 8.728 26.198.116.349.308.671.491 1.062l.67-.78-.167 10.052z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M43.155 32.227c.21.274.511.516.617.826a4498.887 4498.887 0 016.7 19.867c2.746 8.211 5.463 16.433 8.213 24.642 1.662 4.961 3.362 9.911 5.062 14.913l.765-.289-.171 2.426-.155.559c-.266 2.656-.49 5.318-.814 7.968-.163 1.328-.509 2.632-.772 3.947-.198-.287-.476-.548-.583-.866-5.467-16.297-10.918-32.6-16.376-48.9a3888.972 3888.972 0 00-5.242-15.551c-.089-.263-.34-.469-.516-.702l3.272-8.84z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M65.202 70.702l-.67.78c-.183-.391-.375-.714-.491-1.062-2.913-8.731-5.812-17.468-8.728-26.198a6167.476 6167.476 0 00-6.768-20.118c-.105-.314-.327-.588-.496-.879l6.055-7.965c.191.255.463.482.562.769 1.681 4.921 3.347 9.848 5.003 14.778 1.547 4.604 3.071 9.215 4.636 13.813.105.308.47.526.714.786l.012 1.045c.058 8.082.115 16.167.171 24.251z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M65.021 45.404c-.244-.26-.609-.478-.714-.786-1.565-4.598-3.089-9.209-4.636-13.813-1.656-4.93-3.322-9.856-5.003-14.778-.099-.287-.371-.514-.562-.769 1.969-1.928 3.877-3.925 5.925-5.764 1.821-1.634 3.285-3.386 3.352-5.968.003-.107.059-.214.145-.514l.519 1.306c-.013.661-.072 1.322-.029 1.979.075 1.143.259 2.28.311 3.423.096 2.127.142 4.258.185 6.388.069 3.428.132 6.856.175 10.285.067 5.478.111 10.956.18 16.434.008.861.098 1.718.152 2.577z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M62.598 107.085c.263-1.315.609-2.62.772-3.947.325-2.649.548-5.312.814-7.968l.066-.01.066.011a41.402 41.402 0 001.394 9.838c-.176.232-.425.439-.518.701-.727 2.05-1.412 4.116-2.143 6.166-.1.28-.378.498-.574.744l-.747-2.566.87-2.969z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M62.476 112.621c.196-.246.475-.464.574-.744.731-2.05 1.417-4.115 2.143-6.166.093-.262.341-.469.518-.701l1.255 2.754c-.248.352-.59.669-.728 1.061l-2.404 7.059c-.099.283-.437.483-.663.722l-.695-3.985z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M63.171 116.605c.227-.238.564-.439.663-.722l2.404-7.059c.137-.391.48-.709.728-1.061l1.215 1.037c-.587.58-.913 1.25-.717 2.097l-.369 1.208c-.168.207-.411.387-.494.624-.839 2.403-1.64 4.819-2.485 7.222-.107.305-.404.544-.614.812-.109-1.387-.22-2.771-.331-4.158z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M63.503 120.763c.209-.269.506-.508.614-.812.845-2.402 1.646-4.818 2.485-7.222.083-.236.325-.417.494-.624l-.509 5.545c-.136.157-.333.294-.398.477-.575 1.614-1.117 3.24-1.694 4.854-.119.333-.347.627-.525.938-.158-.207-.441-.407-.454-.623-.051-.841-.016-1.688-.013-2.533z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M63.969 123.919c.178-.312.406-.606.525-.938.578-1.613 1.119-3.239 1.694-4.854.065-.183.263-.319.398-.477l.012 3.64-1.218 3.124-1.411-.495z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M65.38 124.415l1.218-3.124.251 3.696-1.469-.572z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M67.464 110.898c-.196-.847.129-1.518.717-2.097l.337.23-1.054 1.867z"
-              ></path>
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M64.316 95.172l-.066-.011-.066.01.155-.559-.023.56z"
-              ></path>
-            </svg>
-
-            <p class="skills-card-name">MongoDB</p>
-          </div> -->
-
-          <!-- Git logo -->
-          <!-- <div class="skills-card">
-            <svg
-              viewBox="-1.5 -1.5 128 128"
-              role="img"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="dev-icon skills-card-img"
-            >
-              <path
-                transform="scale(0.98)"
-                d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z"
-              />
-            </svg>
-            <p class="skills-card-name">Git</p>
-          </div> -->
-
-          <!-- GitHub logo -->
-          <!-- <div class="skills-card">
-            <svg
-              viewBox="0 0 128 128"
-              role="img"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="3"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="dev-icon skills-card-img"
-            >
-              <g>
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
-                />
-              </g>
-            </svg>
-            <p class="skills-card-name">GitHub</p>
-          </div> -->
-        </div>
-      </div>
-    </div>
-    <!-- end of skill section -->
-
-    <!-- Project Section -->
-    <div class="project" id="projects">
-      <div class="project__inner-container">
-        <h2
-          class="general__h2"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
-          <span class="general__span">My Projects</span>
-        </h2>
-        <!-- project 1 -->
-        <div
-          class="project__card project-card"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          data-aos-once="true"
-        >
-          <div class="project__image-container">
-            <img src="./images/project1.png" alt="project 1" />
-          </div>
-          <div class="project__container-1">
-            <p># Project 1</p>
-            <h3 class="project-title">Bouncy Invention</h3>
-            <div class="project__description">
-              <p class="project-description">
-                Bouncy Invention is a platform focused on transforming Blog
-                experiences. Users engage in various Blogs activities, post
-                daily and weekly post. It's designed in a way pixel perfect to the provided Figma template.
-      
-              </p>
-            </div>
-            <div class="project__tech-stack-1 project-tech-stack">
-              <p>Html</p>
-              <p>Sass</p>
-              <p>Css</p>
-            </div>
-            <div class="card-details-tech-icons-1">
-              <!-- github svg -->
-              <a
-                href="https://github.com/sur-123-bhi/bouncy-invention-713.git"
-                class="project-github-link"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="github"
-                >
-                  <title>GitHub</title>
-                  <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                  ></path>
-                  </svg>
-                </a>
-
-              <!-- external link svg -->
-              <a
-                href="https://bounty-invention-713.netlify.app/"
-                class="project-deployed-link"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="external-link"
-                >
-                  <title>External Link</title>
-                  <path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  ></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- project 2 -->
-        <div
-          class="project__card project-card"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
-          <div class="project__container-2">
-            <p># Project 2</p>
-            <h3 class="project-title">Alcazar</h3>
-            <div class="project__description">
-              <p class="project-description">
-                About Alcazar is one of the most used travel agency website.Discover a world of convenience and luxury as
-                we offer a comprehensive array of facilities to elevate every aspect of your getaway. 
-                From handpicked accommodations to curated itineraries, we specialize in crafting unforgettable
-              </p>
-            </div>
-
-            <div class="project__tech-stack-2 project-tech-stack">
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>Javascript</p>
-              <p>Sass</p>
-              <p>JavaScript</p>
-            </div>
-            <div class="card-details-tech-icons-2">
-              <!-- github svg -->
-              <a
-                href="https://github.com/Aishu1123/Alcazar_Travel_Website.git"
-                class="project-github-link"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  role="img"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="github"
-                >
-                  <title>GitHub</title>
-                  <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                  ></path></svg>
-              </a>
-
-              <!-- external link svg -->
-              <a
-                href="https://alcazartravel.netlify.app/"
-                class="project-deployed-link"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="external-link"
-                >
-                  <title>External Link</title>
-                  <path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  ></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="project__image-container">
-            <img src="./images/project2.png" alt="project 2" />
-          </div>
-        </div>
-
-        <!-- project 3 -->
-        <div
-          class="project__card project-card"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
-          <div class="project__image-container">
-            <img src="./images/project3.png" alt="project 3" />
-          </div>
-          <div class="project__container-1">
-            <p># Project 3</p>
-            <h3 class="project-title">Bon Voyage</h3>
-            <div class="project__description">
-              <p class="project-description">
-                Bon Voyage, your ultimate online vacation booking destination, is designed to transform your travel dreams into reality.
-                 Our platform presents a diverse array of destinations 
-                and accommodations, ensuring you discover the perfect match for your ideal getaway
-              </p>
-            </div>
-            <div class="project__tech-stack-1 project-tech-stack">
-              <p>React</p>
-              <p>Chakra UI</p>
-              <p>JSON Server</p>
-              <p>JavaScript</p>
-            </div>
-            <div class="card-details-tech-icons-1">
-              <!-- github svg -->
-              <a
-                href="https://github.com/praveen4898/javascript-yodha-8901.git"
-                class="project-github-link"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="github"
-                >
-                  <title>GitHub</title>
-                  <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                  ></path></svg>
-              </a>
-
-              <!-- external link svg -->
-              <a
-                href="https://65ae04d77f6077f381dc06a8--cheery-sprite-5f8d56.netlify.app/"
-                class="project-deployed-link"></a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="external-link"
-                >
-                  <title>External Link</title>
-                  <path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  ></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- project 4 -->
-        <!-- <div
-          class="project__card project-card"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
-          <div class="project__container-2">
-            <p># Project 4</p>
-            <h3 class="project-title"></h3>
-            <div class="project__description">
-              <p class="project-description">
+                <a
+                href="https://drive.google.com/uc?export=download&id=1AfW5cVA52AzUwj-2b7cMt8TZZMCX4G45"
+                rel="noreferrer"
+             
                 
-              </p>
+                id="resume-link-1"
+                class="nav-link resume"
+                download
+              >
+                <button id="resume-button-1"   class="shine">
+               
+                RESUME
+                </button></a>
+
+                <!-- <button id="resume-button-1" class="resume_link_resume shine"><a class="nav-link resume" target="_blank"
+                        id="resume-link-1" 
+                        href="https://drive.google.com/uc?export=download&id=1AfW5cVA52AzUwj-2b7cMt8TZZMCX4G45">RESUME</a></button> -->
+                <!-- <button id="resume-button-1" class="resume_link_resume shine"><a
+                            href="https://drive.google.com/uc?export=download&id=1AfW5cVA52AzUwj-2b7cMt8TZZMCX4G45" class="nav-link resume"
+                            target="_blank"
+                            id="resume-link-1" download>RESUME</a></button> -->
+            </div>
+        </div>
+    </section>
+
+    <!--!================= left Section =================------->
+    <div class="left_pannel" data-aos="fade-right">
+
+        <div class="icon_container">
+            <!-- github -->
+            <a href="https://github.com/JayachandranRamu" id="contact-github" target="_blank"><svg
+                    xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                    <title>GitHub</title>
+                    <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                </svg>
+            </a>
+            <!-- linkdin -->
+            <a href="https://www.linkedin.com/in/jayachandran-ramu-93a74a247/" id="contact-linkedin"
+                aria-label="Linkedin" target="_blank" rel="noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+                    <title>Linkedin</title>
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+            <!-- phone -->
+            <a href="tel:+916374138668" id="contact-phone" aria-label="Phone" target="_blank" rel="noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-phone-call">
+                    <title>Phone Number</title>
+                    <path
+                        d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                </svg>
+            </a>
+            <!-- twitter -->
+            <!-- <a href="https://twitter.com/AnshitaGup4530" aria-label="Twitter" target="_blank" rel="noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+                    <title>Twitter</title>
+                    <path
+                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                    </path>
+                </svg>
+            </a> -->
+        </div>
+    </div>
+
+    <!--!================= Right Section =================------->
+    <div class="right_pannel" data-aos="fade-left">
+        <div class="email_container">
+            <a href="mailto:jayachandran9629040900@gmail.com" id="contact-email">jayachandran9629040900@gmail.com</a>
+        </div>
+    </div>
+
+    <!--!================= Main Section =================------->
+    <section class="main_pannel" id="main_section">
+
+        <!--!================= Home Section =================------->
+        <section id="home" class="home section">
+            <div class="home_container">
+                <h3 class="home_container_intro" data-aos="fade-right"></h3>
+                <h1 id="user-detail-name" data-aos="fade-up" class="home_container_intro_name">Jayachandran Ramu</h1>
+                <h1 data-aos="zoom-in">Full Stack Web Developer</h1>
+                <p id="user-detail-intro" data-aos="fade-down">Dedicated, skilled Full Stack Web Developer adept in MERN
+                    technologies. Proven ability in both independent and team project delivery, showcasing exemplary UI
+                    design skills.</p>
+                <!-- <button  class="shine2" data-aos="zoom-in-down">
+                        <a download="" href="./assets/pdf/Anshita-Gupta-Resume.pdf"
+                            >Download CV<i class="fa-solid fa-download"></i></a>
+                    </button> -->
+                <div className="button"> 
+               <a
+                        href="./pdf/Jayachandran-Ramu-Resume.pdf"
+                        rel="noreferrer"
+                     
+                    
+                        id="resume-link-2"
+                    
+                        download
+                      >
+                        <button class="shine2" data-aos="zoom-in-down" style="letter-spacing: 1px;"  id="resume-button-2">
+                       
+                        RESUME<i class="fa-solid fa-download"></i>
+                        </button></a> 
+
+                </div> 
+                <!-- <button id="resume-button-2" class="shine2" data-aos="zoom-in-down">
+                    <a download href="https://drive.google.com/uc?export=download&id=1AfW5cVA52AzUwj-2b7cMt8TZZMCX4G45"
+                        id="resume-link-2" style="letter-spacing: 1px;">RESUME<i class="fa-solid fa-download"></i></a>
+
+                </button> -->
+
+
+            </div>
+        </section>
+
+        <!--!================= About Section =================------->
+        <section id="about" class="about section">
+            <div class="section_title">
+                02. <span>About Me</span>
+            </div>
+            <div class="about_container" data-aos="fade-right">
+                <div class="about_left">
+                    <p id="user-detail-intro" style="display:none;">
+                        "
+                        "MERN","JavaScript","MongoDB","Frontend","Backend","java","SQL","NodeJS","HTML","CSS","Express""
+                    </p>
+                    <p>Hi, I'm Jayachandran Ramu from Chengalpet, TamilNadu. An inquisitive solution-driven Full Stack
+                        Web Developer. Practised
+                        over 700+ Data Structures and Algorithm Problems. Having 1200+ hours of hands-on experience in
+                        Coding and
+                        developing real-world Web Applications.</p>
+                    <!-- <p>I recently got a <a
+                            href="https://www.linkedin.com/posts/bhupender-soni_masaischool-activity-6996568692620726272-sGhr?utm_source=share&utm_medium=member_desktop">Bhaichung
+                            Bhutia Scholarship</a> for exemplary performance at Masai
+                        School</p> -->
+                    <p>At Masai School I have successfully completed following:</p>
+                    <div class="about_stats">
+                        <div>
+                            <span class="stats_number">1200+</span>
+                            <span class="stats_title">Hours Of Coding</span>
+                        </div>
+                        <div>
+                            <span class="stats_number">700+</span>
+                            <span class="stats_title">DSA Problems</span>
+                        </div>
+                        <div>
+                            <span class="stats_number">10+</span>
+                            <span class="stats_title">Projects</span>
+                        </div>
+                    </div>
+                    <!-- <button id="resume-button-2" class="shine2" data-aos="zoom-in-down">
+                        <a download="" href="./assets/pdf/Anshita-Gupta-Resume.pdf"
+                            id="resume-link-2">Download CV<i class="fa-solid fa-download"></i></a>
+                    </button> -->
+                </div>
+                <div class="about_right" data-aos="zoom-in-left">
+                    <div class="about_img_container" class="home-img">
+                        <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j983h04mocyewz6rn1eo.jpg"
+                            alt="" class="home-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--!================= Skills Section =================------->
+        <section id="skills" class="skills section" data-aos="fade-up">
+            <!-- section heading -->
+            <div class="section_title">
+                03. <span>Skills</span>
+            </div>
+            <div class="skills_container">
+                <div class="frontend-skills">
+                    <!-- <h1>Tech Stacks</h1> -->
+                    <div class="fs_container">
+                        <div class="skills-card" data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                class="skills-card-img" alt="html5">
+
+                            <span class="skills-card-name">HTML</span>
+                        </div>
+                        <div class="skills-card" data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                class="skills-card-img" alt="css3">
+                            <span class="skills-card-name">CSS</span>
+                        </div>
+                        <div class="skills-card" data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                class="skills-card-img" alt="JavaScript">
+                            <span class="skills-card-name">JavaScript</span>
+                        </div>
+                        <div class="skills-card" data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gdjq4zh46lzqnp6fbi8r.png"
+                                class="skills-card-img" alt="JavaScript">
+                            <span class="skills-card-name">TypeScript</span>
+                        </div>
+                        <div class="skills-card" data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                class="skills-card-img" alt="react">
+                            <span class="skills-card-name">React</span>
+                        </div>
+                        <div class="skills-card" data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg"
+                                class="skills-card-img" alt="sql">
+                            <span class="skills-card-name">Redux</span>
+                        </div>
+                        <div class="skills-card" data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kgylikol6cul48fwu5v2.png"
+                                class="skills-card-img" alt="JavaScript">
+                            <span class="skills-card-name">Chakra UI</span>
+                        </div>
+                        <div class="skills-card" data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="assets/img/icon/node.png" class="skills-card-img" alt="nodejs">
+                            <span class="skills-card-name">Node.js</span>
+                        </div>
+                        <div class="skills-card" data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="assets/img/icon/express1.png" class="skills-card-img" alt="express">
+                            <span class="skills-card-name">Express.js</span>
+                        </div>
+
+                        <div class="skills-card" data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                class="skills-card-img" alt="mongodb">
+                            <span class="skills-card-name">MongoDB</span>
+                        </div>
+
+
+
+
+
+                        <!-- <div class="skills-card" 
+                            data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                                class="skills-card-img" alt="vscode">
+                            <span class="skills-card-name">VS Code</span>
+                        </div> -->
+                        <div class="skills-card" data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="https://www.svgrepo.com/show/374118/tailwind.svg" class="skills-card-img"
+                                alt="materialui">
+                            <span class="skills-card-name">Tailwind CSS</span>
+                        </div>
+                        <!-- <div class="skills-card" 
+                            data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                class="skills-card-img" alt="bootstrap">
+                            <span class="skills-card-name">Bootstrap</span>
+                        </div> -->
+                        <!-- <div class="skills-card"
+                            data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                class="skills-card-img" alt="git">
+                            <span class="skills-card-name">Git</span>
+                        </div> -->
+                        <div class="skills-card" data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="https://www.svgrepo.com/show/217753/github.svg" class="skills-card-img"
+                                alt="github">
+                            <span class="skills-card-name">Github</span>
+                        </div>
+                        <div class="skills-card" data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="assets/img/icon/npm.png" class="skills-card-img" alt="github">
+                            <span class="skills-card-name">NPM</span>
+                        </div>
+                        <div class="skills-card" data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="https://www.svgrepo.com/show/354202/postman-icon.svg"
+                                class="skills-card-img" alt="github">
+                            <span class="skills-card-name">Postman</span>
+                        </div>
+                        <div class="skills-card" data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png">
+                            <span class="skills-card-name">Vercel</span>
+                        </div>
+                        <!-- <div class="skills-card" 
+                            data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="./assets/img/icon/heroku.png">
+                            <span class="skills-card-name">Heroku</span>
+                        </div> -->
+                        <!-- <div class="skills-card" 
+                            data-aos-anchor-placement="top-bottom">
+                            <div class="skills-card-img" style="display: none;"></div>
+                            <img src="./assets/img/icon/canva.png">
+                            <span class="skills-card-name">Canva</span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--!================= Project Section =================------->
+        <section id="projects" class="projects section">
+            <!-- section heading -->
+            <div class="section_title">
+                04. <span>My Projects</span>
+            </div>
+            <!--! -------------- Edito project card -------------- -->
+            <div class="project-card" data-aos="fade-up">
+                <!-- ------ project Image -------- -->
+                <div class="project-card_img_section" data-aos="fade-right">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                        data-bs-interval="3000">
+
+
+
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qk48snhihsg53rlqz02k.png"
+                                    class="d-block w-100" alt="Gator Home">
+                            </div>
+                            <!-- <div class="carousel-item">
+                                    <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lcwxnz2zaycddrvr7lad.png" class="d-block w-100" alt="Gator Home">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fvotknfgc54pst4owktv.png" class="d-block w-100" alt="Gator Home">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5v1z6x2b2vrx4akvx1ma.png" class="d-block w-100" alt="Gator Home">
+                                </div> -->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card_description_section" data-aos="fade-left">
+                    <h2 class="project-title">TUTOR AI</h2>
+                    <div class="project-description">
+                        <p>Tutor-AI, our cutting-edge platform, uses AI and advanced language processing to simulate
+                            real interview scenarios. Users gain valuable feedback to identify strengths and areas for
+                            improvement in their interview skills. It's an innovative self-interview preparation tool
+                            powered by artificial intelligence.</p>
+                        <!-- <p>
+                            COLLAB</p> -->
+                        <div class="member">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/121331649?v=4" alt="">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/130351451?v=4" alt="">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/130533373?v=4" alt="">
+                        </div>
+                    </div>
+                    <div class="project-tech-stack">
+                        <span>React</span>
+                        <span>Typescript</span>
+                        <span>Mongo DB</span>
+                        <span>Node</span>
+                        <span>Express</span>
+                        <span>Open AI</span>
+                        <span>Tailwind CSS</span>
+                    </div>
+                    <div class="project_btn">
+                        <a href="https://github.com/JayachandranRamu/HackSquad" class="project-github-link"
+                            target="_blank"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-github">
+                                <title>GitHub</title>
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://tutor-ai-delta.vercel.app/" class="project-deployed-link" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-external-link">
+                                <title>Website Link</title>
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-aos="fade-up">
+                <!-- ------ project Image -------- -->
+                <div class="project-card_img_section" data-aos="fade-right">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                        data-bs-interval="3000">
+
+
+
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0j3hzugta75r7kiwohvd.png"
+                                    class="d-block w-100" alt="Gator Home">
+                            </div>
+                            <!-- <div class="carousel-item">
+                                    <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lcwxnz2zaycddrvr7lad.png" class="d-block w-100" alt="Gator Home">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fvotknfgc54pst4owktv.png" class="d-block w-100" alt="Gator Home">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5v1z6x2b2vrx4akvx1ma.png" class="d-block w-100" alt="Gator Home">
+                                </div> -->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card_description_section" data-aos="fade-left">
+                    <h2 class="project-title">BE CHARITY</h2>
+                    <div class="project-description">
+                        <p>Our project aims to raise funds for children in Africa. You can register an account, log in,
+                            and contribute to the cause. Additionally, you have the opportunity to volunteer and create
+                            your own fundraising efforts. This project was a collaborative undertaking completed within
+                            a five-day timeframe.</p>
+                        <!-- <p>
+                            COLLAB</p> -->
+                        <div class="member">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/121331649?v=4" alt="">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/119414384?v=4" alt="">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/112228231?v=4" alt="">
+
+
+                        </div>
+                    </div>
+                    <div class="project-tech-stack">
+                        <span>React</span>
+                        <span>JavaScript</span>
+                        <span>Mongo DB</span>
+                        <span>Node</span>
+                        <span>Express</span>
+                        <span>Chakra UI</span>
+                    </div>
+                    <div class="project_btn">
+                        <a href="https://github.com/JayachandranRamu/Be-Charity" class="project-github-link"
+                            target="_blank"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-github">
+                                <title>GitHub</title>
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://becharity.vercel.app/" class="project-deployed-link" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-external-link">
+                                <title>Website Link</title>
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-aos="fade-up">
+                <!-- ------ project Image -------- -->
+                <div class="project-card_img_section" data-aos="fade-right">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                        data-bs-interval="3000">
+
+
+
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/93hmh3xz6lp15knmvaww.png"
+                                    class="d-block w-100" alt="Gator Home">
+                            </div>
+                            <!-- <div class="carousel-item">
+                                    <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lcwxnz2zaycddrvr7lad.png" class="d-block w-100" alt="Gator Home">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fvotknfgc54pst4owktv.png" class="d-block w-100" alt="Gator Home">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5v1z6x2b2vrx4akvx1ma.png" class="d-block w-100" alt="Gator Home">
+                                </div> -->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card_description_section" data-aos="fade-left">
+                    <h2 class="project-title">WOOD HEART</h2>
+                    <div class="project-description">
+                        <p>The project involves creating a full-fledged online furniture retail website where users can
+                            register, browse a wide range of furniture products, add items to their shopping cart, make
+                            secure purchases, and leave reviews. The project was a collaborative effort completed in
+                            just five days.</p>
+                        <!-- <p>
+                            COLLAB</p> -->
+                        <div class="member">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/121331649?v=4" alt="">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/112228231?v=4" alt="">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/77391820?v=4" alt="">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/121709505?v=4" alt="">
+                        </div>
+                    </div>
+                    <div class="project-tech-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>TypeScript</span>
+                        <span>React</span>
+                        <span>Chakra UI</span>
+                    </div>
+                    <div class="project_btn">
+                        <a href="https://github.com/JayachandranRamu/posh-division-4370" class="project-github-link"
+                            target="_blank"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-github">
+                                <title>GitHub</title>
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://wood-heart.vercel.app/" class="project-deployed-link" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-external-link">
+                                <title>Website Link</title>
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
             </div>
 
-            <div class="project__tech-stack-2 project-tech-stack">
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>Javascript</p>
+            <!--! -------------- ALS project card (Flip)-------------- -->
+            <div class="project-card" data-aos="fade-up">
+                <!-- ------ project Image -------- -->
+                <div class="project-card_img_section" data-aos="fade-right">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                        data-bs-interval="3000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/h1gg8ho5umo88bydktcl.png"
+                                    class="d-block w-100" alt="Gator Home">
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card_description_section" data-aos="fade-left">
+                    <h2 class="project-title">CONNECT</h2>
+                    <div class="project-description">
+                        <p>Connect is a Student Relationship Management platform built by a team of four members in just
+                            five days. It connects individuals within a Community and offers many features like group
+                            chat. The site boasts a responsive design with a dark mode and an admin section for managing
+                            user data.</p>
+                        <div class="member">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/121331649?v=4" alt="">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/130532573?v=4" alt="">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/130351451?v=4" alt="">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/118984511?v=4" alt="">
+
+                        </div>
+                    </div>
+                    <div class="project-tech-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project_btn">
+                        <a href="https://github.com/JayachandranRamu/adorable-crown-8253" class="project-github-link"
+                            target="_blank"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-github">
+                                <title>GitHub</title>
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://connect-lms01.netlify.app/" class="project-deployed-link" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-external-link">
+                                <title>Website Link</title>
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
             </div>
-            <div class="card-details-tech-icons-2">
-              <!-- github svg -->
-              <!-- <a
-                href=""
-                class=""
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="github"
-                >
-                  <title>GitHub</title>
-                  <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                  ></path></svg
-              ></a>
+            <div class="project-card" data-aos="fade-up">
+                <!-- ------ project Image -------- -->
+                <div class="project-card_img_section" data-aos="fade-right">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                        data-bs-interval="3000">
 
-              <a
-                href=""
-                class="project-deployed-link"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="external-link"
-                > 
-                  <title>External Link</title>
-                  <path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  ></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line></svg
-              ></a>
+
+
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/k5tnqpt6xtt2y5vlnhx8.png"
+                                    class="d-block w-100" alt="Gator Home">
+                            </div>
+                            <!-- <div class="carousel-item">
+                                    <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lcwxnz2zaycddrvr7lad.png" class="d-block w-100" alt="Gator Home">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fvotknfgc54pst4owktv.png" class="d-block w-100" alt="Gator Home">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5v1z6x2b2vrx4akvx1ma.png" class="d-block w-100" alt="Gator Home">
+                                </div> -->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card_description_section" data-aos="fade-left">
+                    <h2 class="project-title">SEVEN FIT</h2>
+                    <div class="project-description">
+                        <p>Seven Fit is a Luxury Gym Website designed for user to purchase gym packages, booking workout
+                            sessions, and allowing session cancellations. This individual project was developed in just
+                            five days, providing a comprehensive solution for users looking to access high-end gym
+                            services.</p>
+                        <!-- <p>
+                            COLLAB</p> -->
+                        <div class="member">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/121331649?v=4" alt="">
+
+                        </div>
+                    </div>
+                    <div class="project-tech-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Chakra UI</span>
+                    </div>
+                    <div class="project_btn">
+                        <a href="https://github.com/JayachandranRamu/parched-bedroom-7723" class="project-github-link"
+                            target="_blank"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-github">
+                                <title>GitHub</title>
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://seven-fit.vercel.app/" class="project-deployed-link" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-external-link">
+                                <title>Website Link</title>
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="project__image-container">
-            <img src="./images/project4.PNG" alt="project 4" />
-          </div>
-        </div>  -->
+            <div class="project-card" data-aos="fade-up">
 
-        <!-- project 5 -->
-      </div>
-    </div>
-    <!-- end of Projects Section -->
+                <div class="project-card_img_section" data-aos="fade-right">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                        data-bs-interval="3000">
 
-    <!-- GitHub Stats -->
-    <div id="github">
-      <h2
-        class="general__h2"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-once="true"
-      >
-        <span class="general__span">GitHub Stats</span>
-      </h2>
-      <div
-        class="github__container"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-        data-aos-once="true"
-      >
-        <div class="react-activity-calendar">
-          <!-- <div class="calendar" id="heatmap-container">
-            <img
-              src=""
-              alt=""
-            />
-          </div> -->
-        </div>
 
-        <div id="github-stats">
-          <div class="stats-card">
-            <img
-              id="github-stats-card"
-              src="https://github-readme-stats.vercel.app/api?username=praveen4898&theme=transparent&hide_border=false&include_all_commits=false&count_private=false"
-              alt="praveen4898"
-            />
-          </div>
-          <div class="top-langs stats-card">
-            <img
-              id="github-top-langs"
-              src="https://github-readme-stats.vercel.app/api/top-langs/?username=praveen4898&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact"
-              alt="praveen4898"
-            />
-          </div>
-          <div class="streak-stats stats-card">
-            <img
-              id="github-streak-stats"
-              src="https://github-readme-streak-stats.herokuapp.com/?user=praveen4898&theme=transparent&hide_border=false"
-              alt="audacity07"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end of GitHub Stats -->
 
-    <!-- Contact Section -->
-    <div id="contact" class="contact">
-      <div class="contact__inner-container">
-        <h2
-          class="general__h2"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once="true"
-        >
-          <span class="general__span">Contact</span>
-        </h2>
-        <h2 data-aos="fade-up" data-aos-duration="1250" data-aos-once="true">
-          Let's Talk!
-        </h2>
-        <div
-          class="contact-details-card"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          data-aos-once="true"
-        >
-          <a href="#" id="contact-email"
-            ><div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-                class="mail"
-              >
-                <path
-                  d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
-                />
-              </svg>
-              <p>praveenravi4898@gmail.com</p>
-            </div></a
-          >
-          <a href="#" id="contact-phone"
-            ><div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 384 512"
-                class="phone"
-                role="img"
-              >
-                <path
-                  d="M16 64C16 28.7 44.7 0 80 0H304c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H80c-35.3 0-64-28.7-64-64V64zM144 448c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16s-7.2-16-16-16H160c-8.8 0-16 7.2-16 16zM304 64H80V384H304V64z"
-                />
-              </svg>
-              <p>+91 9092858168</p>
-            </div></a
-          >
 
-          <a href="https://github.com/praveen4898" id="contact-github"
-            ><div>
-              <!-- github svg -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="github"
-              >
-                <title>GitHub</title>
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                ></path>
-              </svg>
-              <p>github.com/praveen4898</p>
-            </div></a
-          >
-          <a
-            href="https://www.linkedin.com/in/praveen-kumar-r-9b85b6184/"
-            id="contact-linkedin"
-            ><div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                class="linkedIn"
-              >
-                <path
-                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                />
-              </svg>
-              <p>in/praveenkumar/</p>
-            </div></a
-          >
-        </div>
-      </div>
-    </div>
-    <!-- end of Contact Section -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1kyskv7y7s12mcc9162k.png"
+                                    class="d-block w-100" alt="Gator Home">
+                            </div>
 
-    <!-- Footer -->
-    <footer>
-      <div class="footer-container">
-        <p>Designed & Developed by <span>Praveen Kumar</span></p>
-      </div>
-    </footer>
-    <!-- end of Footer -->
 
-    <script src="./scripts/index.js"></script>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card_description_section" data-aos="fade-left">
+                    <h2 class="project-title">HIGHWAY</h2>
+                    <div class="project-description">
+                        <p>Highway is a luxury car rental website, providing users with essential features such as
+                            secure login and signup, effective sorting and filtering options, detailed single product
+                            pages, and a user-friendly payment process. This individual project was developed in just
+                            five days.</p>
+                        <div class="member">
+                            <img class="avatar" src="https://avatars.githubusercontent.com/u/121331649?v=4" alt="">
+
+                        </div>
+                    </div>
+                    <div class="project-tech-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+
+                    </div>
+                    <div class="project_btn">
+                        <a href="https://github.com/JayachandranRamu/equal-slip-6381" class="project-github-link"
+                            target="_blank"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-github">
+                                <title>GitHub</title>
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://verdant-melomakarona-f2aa0d.netlify.app/" class="project-deployed-link"
+                            target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-external-link">
+                                <title>Website Link</title>
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--! -------------- mysecretnotes project card (Flip)-------------- -->
+
+        </section>
+
+        <!--!================= Github Stats =================------->
+        <section class="about react-activity-calendar" id="github" data-aos="fade-up">
+            <h2 class="section__title">Github Calendar Stats</h2>
+            <div class="Github-calendar ">
+                <!-- Loading stuff -->
+                <img style="width: 100%;" src="https://ghchart.rshah.org/050f2c/JayachandranRamu"></img>
+            </div>
+        </section>
+
+        <!--!================= Github Stats =================------->
+        <section class="portfolio section githubstates " id="githubstates" data-aos="fade-up">
+            <h2 class="section__title">GitHub Activities</h2>
+            <div id="carouselExampleIndicators" class="carousel slide github_carousel_container carousel-fade"
+                data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner github-carousel-window ">
+                    <div class="carousel-item active">
+                        <!-- fix-JayachandranRamu -->
+                        <img src="https://github-readme-streak-stats.herokuapp.com/?user=JayachandranRamu&theme=tokyonight&hide_border=true"
+                            class="d-block w-100" alt="..." id="github-streak-stats">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JayachandranRamu&theme=tokyonight&hide_border=true&include_all_commits=false&count_private=false&layout=compact"
+                            id="github-top-langs" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://github-readme-stats.vercel.app/api?username=JayachandranRamu&theme=tokyonight&hide_border=true&include_all_commits=false&count_private=false"
+                            id="github-stats-card" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!--!================= Contact =================------->
+        <section id="contact" data-aos="fade-up">
+            <div class="section_title">
+                05. <span>Contact</span>
+            </div>
+            <!-- ----- for mobile screen ---- -->
+            <!-- ----- for desktop screen ---- -->
+            <div class="contact_layout_container">
+                <div class="contact-mobile-active" data-aos-anchor-placement="top-bottom">
+                    <span>Get in Touch </span>
+                    <!-- <p>I'm looking for new opportunities, my inbox is always open. Whether you have a question or just
+                        want to say hi, I’ll be so happy to connect with you!</p> -->
+                    <!-- <a href="mailto:anshitagupta783@gmail.com" id="contact-email">Say Hello</a> -->
+                </div>
+                <div class="contact-info-container" data-aos="fade-zoom-in">
+                    <a href="tel:+916374138668" class="contact-info-card">
+                        <img src="./assets/img/icon/phone-call.svg" alt="">
+                        <!-- <span> Call Me</span> -->
+                        <span> +91 63741 38668</span>
+                    </a>
+                    <a href="mailto:jayachandran9629040900@gmail.com" class="contact-info-card">
+                        <img src="./assets/img/icon/mail.svg" alt="">
+                        <!-- <span>Write Me</span> -->
+                        <span>jayachandran9629040900 @gmail.com</span>
+                    </a>
+                    <a href="https://github.com/JayachandranRamu" class="contact-info-card">
+                        <img src="./assets/img/icon/github.svg" alt="">
+                        <!-- <span>Checkout</span> -->
+                        <span>JayachandranRamu</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jayachandran-ramu-93a74a247/" class="contact-info-card">
+                        <img src="./assets/img/icon/linkedin.svg" alt="">
+                        <!-- <span>Ping Me</span> -->
+                        <span>Jayachandran Ramu</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <div class="mobile_footer_icons">
+                    <div>
+                        <a target="_blank" href="https://github.com/JayachandranRamu"><img
+                                src="./assets/img/icon/github.svg" alt=""></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/jayachandran-ramu-93a74a247/"><img
+                                src="./assets/img/icon/linkedin.svg" alt=""></a>
+                        <a target="_blank" href="tel:+96374138668"><img src="./assets/img/icon/phone-call.svg"
+                                alt=""></a>
+                        <a target="_blank" href="mailto:jayachandran9629040900@gmail.com"><img
+                                src="./assets/img/icon/mail.svg" alt=""></a>
+                    </div>
+                </div>
+                <p>Redesigned & Rebuilt by <a href="https://github.com/JayachandranRamu">Jayachandran Ramu</a></p>
+
+            </div>
+        </section>
+
+    </section>
+    <!-- !--==================== SCROLL TOP ====================-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init()
+        AOS.init({
+            disable: 'mobile',
+            duration: 400,
+            once: false
+        });
     </script>
-  </body>
+    <!-- !--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fa-solid fa-arrow-up scrollup__icon"></i>
+    </a>
+    <!--!================= Bootstrp Script =================------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+<!--==================== GITHUB STATES LIBRARY ====================-->
+<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+
+<!--==================== GITHUB STATES LIBRARY ====================-->
+<script>GitHubCalendar(".Github-calendar", "JayachandranRamu", { responsive: true });</script>
+
+<!--==================== SCROLL REVEAL JS ====================-->
+
+
+<!--==================== Custome JS ====================-->
+<script src="./js/main.js"></script>
+
+
 </html>

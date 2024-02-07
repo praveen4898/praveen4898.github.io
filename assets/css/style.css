@@ -745,7 +745,7 @@ cursor:pointer;
 
 .contact-info-card {
     display: flex;
-    width: 80%;
+    width: 85%;
     /* flex-direction: column; */
     justify-content: start;
     align-items: center;
